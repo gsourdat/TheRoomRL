@@ -16,7 +16,7 @@ def test_saved_model(device_choice="auto"):
     input_dim = GRID_SIZE * GRID_SIZE * len(BLOCK_TYPES) + 2 +1
     output_dim = 4
     train_net = DQN(input_dim, output_dim).to(device)
-    train_net.load_state_dict(torch.load("policy_net4.pth"))
+    train_net.load_state_dict(torch.load("models/policy_net4.pth"))
     train_net.eval()
 
     def preprocess_state(state, player_pos):
@@ -73,7 +73,4 @@ def test_saved_model(device_choice="auto"):
     game.close()
 
 if __name__ == "__main__":
-
-    #train_rl_dqn(device_choice="gpu")
-    #train_rl_dqn(resume_modele="policy_net2.pth", device_choice="gpu")
     test_saved_model()

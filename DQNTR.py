@@ -279,8 +279,8 @@ def train_rl_dqn(resume_modele=None, device_choice="auto"):
     elapsed_time = end_time - start_time
     print(f"Training completed in {elapsed_time:.2f} seconds.")
 
-    torch.save(policy_net.state_dict(), "policy_net4.pth")
-    torch.save(target_net.state_dict(), "target_net4.pth")
+    torch.save(policy_net.state_dict(), "models/policy_net4.pth")
+    torch.save(target_net.state_dict(), "models/target_net4.pth")
     game.close()
 
     # Tracer les récompenses
@@ -296,5 +296,5 @@ def train_rl_dqn(resume_modele=None, device_choice="auto"):
 if __name__ == "__main__":
 
     train_rl_dqn(device_choice="gpu")
-    #train_rl_dqn(resume_modele="policy_net2.pth", device_choice="gpu")
+    #train_rl_dqn(resume_modele="models/policy_net2.pth", device_choice="gpu")
 
