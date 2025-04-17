@@ -1,0 +1,10 @@
+r b g B w w r b g B
+b w B g r w r B g b
+g r b w B g r w b B
+B g w r b B w g r b
+w r b g B w r b g B
+r b g w B r b w g B
+b w r g B b g w r B
+g B w r b g B w r b
+B r g w b B r g w b
+w b r g B w b r g B
